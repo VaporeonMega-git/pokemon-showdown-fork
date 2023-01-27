@@ -6270,4 +6270,29 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
+	aerophoenix: {
+		isNonstandard: "Custom",
+		tier: "Illegal",
+	},
+	arceusorigin: {
+		isNonstandard: "Unobtainable",
+	},
+	vaporeonmega: {
+		isNonstandard: "Unobtainable",
+	},
+	kyuremoriginal: {
+		isNonstandard: "Unobtainable",
+	},
+	crystaleon: {
+		isNonstandard: "Custom",
+		tier: "Illegal",
+	},
+	toxeon: {
+		isNonstandard: "Custom",
+		tier: "Illegal",
+	},
+	birb: {
+		isNonstandard: "Custom",
+		tier: "Illegal",
+	},
 };

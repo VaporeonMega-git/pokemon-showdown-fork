@@ -32,6 +32,8 @@ Ratings and how they work:
 
 */
 
+import { type } from "os";
+
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
@@ -5154,7 +5156,61 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 5,
 		num: 278,
 	},
-
+	flameaura: {
+		name: "Flame Aura",
+		shortDesc: "Damaging moves are boosted by 50% in power.",
+		num: -10001,
+		onDamage(damage, target, source, effect) {
+			return damage * 1.5;
+		},
+		desc: "All of Aerophoenix's damaging moves are boosted by 50% in power",
+	},
+	sturdyrock: {
+		name: "Sturdy Rock",
+		shortDesc: "Grants immunity to all OHKO moves and to Defense being lowered.",
+		num: -10002,
+		onTryHit(pokemon, target, move) {
+			if (move.ohko) {
+				this.add('-immune', pokemon, '[from] ability: Sturdy Rock');
+				return null;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) return;
+			let showMsg = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost.def != undefined && boost.def < 0) {
+					delete boost[i];
+					showMsg = true;
+				}
+			}
+			if (showMsg && !(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
+				this.add("-fail", target, "unboost", "[from] ability: Sturdy Rock", "[of] " + target);
+			}
+		},
+		desc: "Crystaleon is immune to all OHKO moves and its Defense cannot be lowered.",
+	},
+	refract: {
+		name: "Refract",
+		shortDesc: "Rock and Ice type moves without a chance to flinch gain a 30% chance to flinch",
+		num: -10003,
+		onModifyMovePriority: -1,
+		onModifyMove(move) {
+			if (move.category !== "Status" && (move.type == "Rock" || move.type == "Ice")) {
+				this.debug('Adding Refract flinch');
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.volatileStatus === 'flinch') return;
+				}
+				move.secondaries.push({
+					chance: 30,
+					volatileStatus: 'flinch',
+				});
+			}
+		},
+		desc: "Rock and Ice type moves without a chance to flinch gain a 30% chance to flinch",
+	},
 	// CAP
 	mountaineer: {
 		onDamage(damage, target, source, effect) {

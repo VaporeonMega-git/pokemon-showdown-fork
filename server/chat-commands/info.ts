@@ -420,6 +420,26 @@ export const commands: Chat.ChatCommands = {
 	},
 	sharedbattleshelp: [`/sharedbattles [user1], [user2] - Finds recent battles common to [user1] and [user2]. Requires % @ &`],
 
+	customp: 'custompokemon',
+	custompokemon() {
+		this.sendReplyBox(Utils.html`<b>Custom Pokemon:</b><br />Aerophoenix<br />Aerophoenix-Mega<br />Vaporeon-Mega<br />Kyurem-Original<br />Arceus-Origin<br />Crystaleon<br />Toxeon`);
+	},
+
+	customm: 'custommoves',
+	custommoves() {
+		this.sendReplyBox(Utils.html`<b>Custom Moves:</b><br />Phoenix Dive<br />Shadow Burn`);
+	},
+
+	customa: 'customabilities',
+	customabilities() {
+		this.sendReplyBox(Utils.html`<b>Custom Abilities:</b><br />Flame Aura<br />Sturdy Rock<br />Refract`);
+	},
+	
+	customi: 'customitems',
+	customitems() {
+		this.sendReplyBox(Utils.html`<b>Custom Items:</b><br />Vaporeonite<br />Legend Plate<br />Aerophoenite`);
+	},
+
 	sp: 'showpunishments',
 	showpunishments(target, room, user) {
 		room = this.requireRoom();

@@ -21592,4 +21592,41 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	phoenixdive: {
+		name: "Phoenix Dive",
+		num: -10001,
+		basePower: 130,
+		accuracy: 85,
+		pp: 10,
+		category: "Physical",
+		type: "Flying",
+		priority: 0,
+		target: "normal",
+		flags: {protect: 1, contact: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fire', type);
+		},
+		secondary: {
+			chance: 50,
+			status: 'brn',
+		},
+		shortDesc: "50% chance to burn"
+	},
+	shadowburn: {
+		name: "Shadow Burn",
+		num: -10002,
+		basePower: 90,
+		accuracy: 100,
+		pp: 10,
+		category: "Special",
+		type: "Dark",
+		priority: 0,
+		target: "normal",
+		flags: {protect: 1, contact: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		shortDesc: "30% chance to burn"
+	},
 };

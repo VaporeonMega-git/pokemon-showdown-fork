@@ -30,6 +30,34 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 6,
 		isNonstandard: "Past",
 	},
+	vaporeonite: {
+		name: "Vaporeonite",
+		spritenum: 575,
+		megaStone: "Vaporeon-Mega",
+		megaEvolves: "Vaporeon",
+		itemUser: ["Vaporeon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10001,
+		gen: 9,
+		isNonstandard: "Custom",
+	},
+	aerophoenite: {
+		name: "Aerophoenite",
+		spritenum: 575,
+		megaStone: "Aerophoenix-Mega",
+		megaEvolves: "Aerophoenix",
+		itemUser: ["Aerophoenix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10002,
+		gen: 9,
+		isNonstandard: "Custom",
+	},
 	absolite: {
 		name: "Absolite",
 		spritenum: 576,
@@ -1336,6 +1364,20 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 311,
 		gen: 4,
 		isNonstandard: "Unobtainable",
+	},
+	legendplate: {
+		name: "Legend Plate",
+		spritenum: 105,
+		megaStone: "Arceus-Origin",
+		megaEvolves: "Arceus",
+		itemUser: ["Arceus"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10002,
+		gen: 9,
+		isNonstandard: "Custom",
 	},
 	dragonfang: {
 		name: "Dragon Fang",
