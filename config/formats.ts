@@ -22,6 +22,43 @@ export const Formats: FormatList = [
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 	{
+		section: "Random Battle",
+	},
+	{
+		name: "[Gen 9] Random Battle",
+		mod: 'gen9',
+		team: 'random',
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: "[Gen 9] Random Battle (doubles)",
+		mod: 'gen9',
+		team: 'random',
+		gameType: "doubles",
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: "[Gen 9] Random Battle (triples)",
+		mod: 'gen9',
+		team: 'random',
+		gameType: "triples",
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: "[Gen 9] Random Battle (multi-battle)",
+		mod: 'gen9',
+		team: 'random',
+		gameType: "multi",
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
+		name: "[Gen 9] Random Battle (battle-royale)",
+		mod: 'gen9',
+		team: 'random',
+		gameType: "freeforall",
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
+	},
+	{
 		section: "Pure Hackmons",
 	},
 	{
@@ -59,8 +96,10 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 9] Custom Only",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', '+ Aerophoenix', '+ Aerophoenite', '+ Vaporeon', '+ Arceus', '+ Kyurem-Original', '+ Vaporeonite', "+ Crystaleon", '+ Legend Plate', '+ Toxeon'],
+		ruleset: ['Standard NatDex'],
 		banlist: ['all Pokemon'],
+		unbanlist: ['Aerophoenix', 'Aerophoenite', 'Vaporeon', 'Arceus', 'Kyurem-Original', 'Vaporeonite', "Crystaleon",
+		'Legend Plate', 'Toxeon', 'Zubite', 'Ekansite', 'King Clawthorne'],
 	},
 	{
 		name: "[Gen 9] Custom Only (doubles)",
@@ -92,7 +131,10 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 9] NatDex AAG",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', "+ Aerophoenix", "+ Aerophoenite", "+ Vaporeonite", "+ Kyurem-Original", "+ Legend Plate", "+ Crystaleon", "+ Toxeon", "- Shedinja", "- Assist"],
+		ruleset: ['Standard NatDex'],
+		banlist: ["Shedinja", "Assist"],
+		unbanlist: ["Aerophoenix", "Aerophoenite", "Vaporeonite", "Kyurem-Original", "Legend Plate", "Crystaleon", "Toxeon",
+		'Zubite', 'Ekansite', 'King Clawthorne'],
 	},
 	{
 		name: "[Gen 9] NatDex AAG (doubles)",

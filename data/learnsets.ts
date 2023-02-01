@@ -64004,8 +64004,10 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 		],
 		eventOnly: true,
 	},
-	kyuremoriginaldragon: {
+	kyuremoriginal: {
 		learnset: {
+			fusionflare: ["9L1"],
+			fusionbolt: ["9L1"],
 			ancientpower: ["8L1", "7L15", "6L15", "5L15"],
 			blizzard: ["8M", "8L56", "7M", "7L78", "6M", "6L78", "5M", "5L78"],
 			bodypress: ["8M"],
@@ -94304,6 +94306,31 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			fly: ["9L1"],
 			roost: ["9L1"],
 			ingrain: ["9L1"]
+		}
+	},
+	kingclawthorne: {
+		learnset: {
+			screech: ["9L1"],
+			scratch: ["9L1"],
+			hypervoice: ["9L1"],
+			curse: ["9L1"],
+			disarmingvoice: ["9L1"],
+			echoedvoice: ["9L1"],
+			stompingtantrum: ["9L1"],
+			dragondance: ["9L1"],
+			featherdance: ["9L1"],
+			fierydance: ["9L1"],
+			lunardance: ["9L1"],
+			petaldance: ["9L1"],
+			quiverdance: ["9L1"],
+			raindance: ["9L1"],
+			revelationdance: ["9L1"],
+			swordsdance: ["9L1"],
+			teeterdance: ["9L1"],
+			victorydance: ["9L1"],
+			honeclaws: ["9L1"],
+			tailslap: ["9L1"],
+			tailwhip: ["9L1"],
 		}
 	},
 };

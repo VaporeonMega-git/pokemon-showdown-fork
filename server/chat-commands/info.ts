@@ -437,7 +437,12 @@ export const commands: Chat.ChatCommands = {
 	
 	customi: 'customitems',
 	customitems() {
-		this.sendReplyBox(Utils.html`<b>Custom Items:</b><br />Vaporeonite<br />Legend Plate<br />Aerophoenite`);
+		this.sendReplyBox(Utils.html`<b>Custom Items:</b><br />Vaporeonite<br />Legend Plate<br />Aerophoenite<br />Zubite<br />Ekansite`);
+	},
+
+	customt: 'customtypes',
+	customtypes() {
+		this.sendReplyBox(Utils.html`<b>Pokemon that recieved type changes:</b><br />Lugia<br />Quaquaval<br />Celebi<br />Solgaleo<br />Lunala`);
 	},
 
 	sp: 'showpunishments',

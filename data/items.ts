@@ -58,6 +58,34 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 9,
 		isNonstandard: "Custom",
 	},
+	zubite: {
+		name: "Zubite",
+		spritenum: 575,
+		megaStone: "Lunala",
+		megaEvolves: "Zubat",
+		itemUser: ["Zubat"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10002,
+		gen: 9,
+		isNonstandard: "Custom",
+	},
+	ekansite: {
+		name: "Ekansite",
+		spritenum: 575,
+		megaStone: "Rayquaza",
+		megaEvolves: "Ekans",
+		itemUser: ["Ekans"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10002,
+		gen: 9,
+		isNonstandard: "Custom",
+	},
 	absolite: {
 		name: "Absolite",
 		spritenum: 576,
@@ -1368,13 +1396,19 @@ export const Items: {[itemid: string]: ItemData} = {
 	legendplate: {
 		name: "Legend Plate",
 		spritenum: 105,
-		megaStone: "Arceus-Origin",
-		megaEvolves: "Arceus",
-		itemUser: ["Arceus"],
+		onSwitchIn(pokemon) {
+			if (pokemon.isActive && pokemon.baseSpecies.name === 'Arceus') {
+				this.queue.insertChoice({choice: 'runPrimal', pokemon: pokemon});
+			}
+		},
+		onPrimal(pokemon) {
+			pokemon.formeChange('Arceus-Origin', this.effect, true);
+		},
 		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			if (source.baseSpecies.baseSpecies === 'Arceus') return false;
 			return true;
 		},
+		itemUser: ["Arceus"],
 		num: 10002,
 		gen: 9,
 		isNonstandard: "Custom",

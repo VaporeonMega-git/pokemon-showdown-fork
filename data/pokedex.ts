@@ -6976,6 +6976,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	rayquaza: {
 		num: 384,
 		name: "Rayquaza",
+		baseSpecies: "Ekans",
 		types: ["Dragon", "Flying"],
 		gender: "N",
 		baseStats: {hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95},
@@ -8808,7 +8809,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Normal", "Fire", "Water", "Grass", "Electric", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy"],
 		gender: "N",
 		baseStats: {hp: 120, atk: 120, def: 120, spa: 120, spd: 120, spe: 120},
-		abilities: {0: "Neuroforce"},
+		abilities: {0: "Adaptability"},
 		heightm: 3.2,
 		weightkg: 320,
 		color: "White",
@@ -14395,6 +14396,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Cosmoem",
 		evoLevel: 53,
 		eggGroups: ["Undiscovered"],
+		baseSpecies: "Zubat",
 	},
 	nihilego: {
 		num: 793,
@@ -16690,7 +16692,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	quaquaval: {
 		num: 914,
 		name: "Quaquaval",
-		types: ["Water", "Fighting"],
+		types: ["Water", "Fighting", "Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 85, atk: 120, def: 80, spa: 85, spd: 75, spe: 85},
 		abilities: {0: "Torrent", H: "Moxie"},
@@ -19321,6 +19323,16 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {0: "Wonder Guard"},
 		heightm: 1,
 		weightkg: 1,
+		eggGroups: ["Undiscovered"],
+	},
+	kingclawthorne: {
+		num: -10005,
+		name: "King Clawthorne",
+		types: ["Dark", "Normal"],
+		baseStats: {hp: 100, atk: 50, def: 60, spa: 95, spd: 60, spe: 85},
+		abilities: {0: "Fluffy", 1: "Dancer"},
+		heightm: 0.5,
+		weightkg: 43,
 		eggGroups: ["Undiscovered"],
 	},
 };
