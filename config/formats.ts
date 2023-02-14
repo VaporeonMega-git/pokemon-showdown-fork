@@ -160,37 +160,69 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		ruleset: ['Gen 9 NatDex AAG'],
 	},
+	// {
+	// 	section: "No EVs NatDex Almost Anything Goes"
+	// },
+	// {
+	// 	name: "[Gen 9] No EVs NatDex AAG",
+	// 	mod: 'gen9',
+	// 	ruleset: ['Gen 9 NatDex AAG', "EV Limits = Hp 1-1 / Atk 0-0 / Def 0-0 / Spa 0-0 / Spd 0-0 / Spe 0-0"],
+	// },
+	// {
+	// 	name: "[Gen 9] No EVs NatDex AAG (doubles)",
+	// 	mod: 'gen9',
+	// 	gameType: 'doubles',
+	// 	ruleset: ['Gen 9 No EVs NatDex AAG'],
+	// },
+	// {
+	// 	name: "[Gen 9] No EVs NatDex AAG (triples)",
+	// 	mod: 'gen9',
+	// 	gameType: 'triples',
+	// 	ruleset: ['Gen 9 No EVs NatDex AAG'],
+	// },
+	// {
+	// 	name: "[Gen 9] No EVs NatDex AAG (multi-battle)",
+	// 	mod: 'gen9',
+	// 	gameType: 'multi',
+	// 	ruleset: ['Gen 9 No EVs NatDex AAG'],
+	// },
+	// {
+	// 	name: "[Gen 9] No EVs NatDex AAG (battle-royale)",
+	// 	mod: 'gen9',
+	// 	gameType: 'freeforall',
+	// 	ruleset: ['Gen 9 No EVs NatDex AAG'],
+	// },
 	{
-		section: "No EVs NatDex Almost Anything Goes"
+		section: "NatDex AAG Monotype"
 	},
 	{
-		name: "[Gen 9] No EVs NatDex AAG",
+		name: "[Gen 9] NatDex AAG Monotype",
 		mod: 'gen9',
-		ruleset: ['Gen 9 NatDex AAG', "EV Limits = Hp 1-1 / Atk 0-0 / Def 0-0 / Spa 0-0 / Spd 0-0 / Spe 0-0"],
+		ruleset: ['NatDex AAG', 'Same Type Clause', 'Terastal Clause', 'Species Clause'],
 	},
 	{
-		name: "[Gen 9] No EVs NatDex AAG (doubles)",
+		name: "[Gen 9] NatDex AAG Monotype (doubles)",
 		mod: 'gen9',
 		gameType: 'doubles',
-		ruleset: ['Gen 9 No EVs NatDex AAG'],
+		ruleset: ['NatDex AAG Monotype'],
 	},
 	{
-		name: "[Gen 9] No EVs NatDex AAG (triples)",
+		name: "[Gen 9] NatDex AAG Monotype (triples)",
 		mod: 'gen9',
-		gameType: 'triples',
-		ruleset: ['Gen 9 No EVs NatDex AAG'],
+		gameType: 'doubles',
+		ruleset: ['NatDex AAG Monotype'],
 	},
 	{
-		name: "[Gen 9] No EVs NatDex AAG (multi-battle)",
+		name: "[Gen 9] NatDex AAG Monotype (multi-battle)",
 		mod: 'gen9',
 		gameType: 'multi',
-		ruleset: ['Gen 9 No EVs NatDex AAG'],
+		ruleset: ['NatDex AAG Monotype'],
 	},
 	{
-		name: "[Gen 9] No EVs NatDex AAG (battle-royale)",
+		name: "[Gen 9] NatDex AAG Monotype (battle-royale)",
 		mod: 'gen9',
 		gameType: 'freeforall',
-		ruleset: ['Gen 9 No EVs NatDex AAG'],
+		ruleset: ['NatDex AAG Monotype'],
 	},
 	{
 		section: "Starters Only"
