@@ -422,12 +422,12 @@ export const commands: Chat.ChatCommands = {
 
 	customp: 'custompokemon',
 	custompokemon() {
-		this.sendReplyBox(Utils.html`<b>Custom Pokemon:</b><br />Aerophoenix<br />Aerophoenix-Mega<br />Vaporeon-Mega<br />Kyurem-Original<br />Arceus-Origin<br />Crystaleon<br />Toxeon`);
+		this.sendReplyBox(Utils.html`<b>Custom Pokemon:</b><br />Aerophoenix<br />Aerophoenix-Mega<br />Vaporeon-Mega<br />Kyurem-Original<br />Arceus-Origin<br />Crystaleon<br />Toxeon<br />The Rizzard Of Oz`);
 	},
 
 	customm: 'custommoves',
 	custommoves() {
-		this.sendReplyBox(Utils.html`<b>Custom Moves:</b><br />Phoenix Dive<br />Shadow Burn`);
+		this.sendReplyBox(Utils.html`<b>Custom Moves:</b><br />Phoenix Dive<br />Shadow Burn<br />Unfathomable Rizz`);
 	},
 
 	customa: 'customabilities',

@@ -94333,4 +94333,14 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			tailwhip: ["9L1"],
 		}
 	},
+	therizzardofoz: {
+		learnset: {
+			charm: ["9L1"],
+			unfathomablerizz: ["9L1"],
+			protect: ["9L1"],
+			trick: ["9L1"],
+			trickroom: ["9L1"],
+			hypervoice: ["9L1"],
+		}
+	},
 };

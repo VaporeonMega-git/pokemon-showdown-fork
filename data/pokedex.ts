@@ -19335,4 +19335,14 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 43,
 		eggGroups: ["Undiscovered"],
 	},
+	therizzardofoz: {
+		num: -10006,
+		name: "The Rizzard of Oz",
+		types: ["Fairy", "Normal"],
+		baseStats: {hp: 90, atk: 50, def: 60, spa: 100, spd: 85, spe: 86},
+		abilities: {0: "Magic Guard", 1: "Magic Bounce", H: "Cute Charm"},
+		heightm: 1.5,
+		weightkg: 100,
+		eggGroups: ["Undiscovered"]
+	}
 };
