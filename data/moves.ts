@@ -21686,5 +21686,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Normal",
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cute",
+		shortDesc: "Attract but no gender requirement",
+		desc: "Attract but no gender requirement",
 	},
 };
